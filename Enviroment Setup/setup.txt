@@ -1,0 +1,7 @@
+ 1.install node env
+ 2.npm i -g typescript ==> install ts globally in system
+ 3.npm init -y ==> creates a package.json
+ 4.npm i -D typescript or npm i typescript --save-dev => install ts as dev dep
+ 5.npx tsc --init => init ts
+ 6.tsc = to compile ts to js(as node can't directly run js)
+ 7.add script in package.json => "dev": "tsc && node [name].js"
