@@ -37,8 +37,47 @@ coords[0][1];
 // literal is ts
 // let direction : string;
 // but its its fixed to some values then, 
+// Literals
 let direction;
 direction = 'north';
 if (direction == "north") {
     console.log(direction);
 }
+let responseCode;
+responseCode = 200;
+// Enums - num
+var Size;
+(function (Size) {
+    Size[Size["Small"] = 10] = "Small";
+    Size[Size["Medium"] = 11] = "Medium";
+    Size[Size["Large"] = 12] = "Large";
+})(Size || (Size = {}));
+var size = 10;
+if (size === Size.Small) {
+}
+// Enums - string
+var Direction;
+(function (Direction) {
+    Direction["Up"] = "UP";
+    Direction["Left"] = "LEFT";
+    Direction["Right"] = "RIGHT";
+    Direction["Down"] = "DOWN";
+})(Direction || (Direction = {}));
+var value;
+var Description;
+(function (Description) {
+    Description["SmallText"] = "This is a little text";
+})(Description || (Description = {}));
+console.log(Description.SmallText);
+let p = 1; //ignores type validation
+let q = 2; //forces to check type
+if (typeof q == 'number') {
+    const result = q + 1;
+}
+else if (typeof q == 'string') {
+    const result = q.length;
+}
+// type cast
+let z = 1;
+const output = z + 10; //take z an a number - casting
+console.log(output);

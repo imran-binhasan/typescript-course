@@ -57,7 +57,9 @@ coords[0][1]
 // let direction : string;
 // but its its fixed to some values then, 
 
-let direction : 'north' | 'south' | 'east' | 'west';
+
+// Literals
+let direction : 'north' | 'south' | 'east' | 'west'| 5;
 direction = 'north'
 if(direction == "north"){
     console.log(direction)
@@ -65,5 +67,53 @@ if(direction == "north"){
 
 
 let responseCode: 200 | 404 | 500;
-
 responseCode = 200;
+
+// Enums - num
+enum Size {
+    Small = 10,
+    Medium,
+    Large
+}
+
+var size: Size = 10;
+
+if(size === Size.Small){
+}
+
+// Enums - string
+
+enum Direction {
+    Up = 'UP',
+    Left = 'LEFT',
+    Right = 'RIGHT',
+    Down = 'DOWN' 
+}
+
+var value: Direction;
+
+enum Description {
+    SmallText = 'This is a little text'
+}
+
+console.log(Description.SmallText)
+
+
+let p:any= 1; //ignores type validation
+
+let q:unknown = 2; //forces to check type
+if (typeof q == 'number') {
+    const result = q+1;
+} else if (typeof q == 'string'){
+    const result = q.length;
+}
+// type cast
+let z:unknown = 1;
+const output = (z as number)+10; //take z an a number - casting
+console.log(output)
+
+// avoid runtime error using unknown
+const r:unknown = 10;
+if(r == ''){
+    const res = (r as number[][])[0][1]
+}
