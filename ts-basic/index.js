@@ -1,4 +1,5 @@
 "use strict";
+var _a;
 // Explicit =>
 let a; //When var is not defined but declared
 // Implecit =>
@@ -81,3 +82,21 @@ else if (typeof q == 'string') {
 let z = 1;
 const output = z + 10; //take z an a number - casting
 console.log(output);
+// avoid runtime error using unknown
+const r = 10;
+if (r == '') {
+    const res = r[0][1];
+}
+function processFeedback(input) {
+    console.log(`Processing: ${input}`);
+    return 'Hello';
+}
+processFeedback('12');
+// Optional Chaining and Bang
+const ar = [{ name: 'Tom' }, { name: 'Cat' }];
+const el = (_a = ar.pop()) === null || _a === void 0 ? void 0 : _a.name; //optional chaining
+const dl = ar.pop().name; //bang => assums not undefined
+function add(x, y) {
+    return x + y;
+}
+add(5, 6);

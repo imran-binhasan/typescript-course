@@ -117,3 +117,22 @@ const r:unknown = 10;
 if(r == ''){
     const res = (r as number[][])[0][1]
 }
+
+
+function processFeedback(input:any) {
+    console.log(`Processing: ${input}`)
+    return 'Hello'
+}
+
+processFeedback('12')
+
+// Optional Chaining and Bang
+const ar = [{name: 'Tom'},{name: 'Cat'}]
+const el = ar.pop()?.name //optional chaining
+const dl = ar.pop()!.name //bang => assums not undefined
+
+// Basic function
+function add(x:number ,y:number): number{
+    return x+y
+}
+add(5,6)
